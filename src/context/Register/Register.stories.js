@@ -5,11 +5,13 @@ import { storiesOf } from "@storybook/react";
 import { Register } from "./Register";
 
 const data = {
-    isLoading: true,
-    label: "Registrarse", 
-    errors: false
-}
-storiesOf('Register', module)
-.add('default', () => <Register {...data} isLoading={false}/>)
-.add('isLoading', () => <Register {...data} />)
-.add('IsFormErrors', () =>  <Register {...data} isLoading={false} errors={true} />)
+  isLoading: true,
+  label: "Sing in",
+  errors: false,
+};
+storiesOf("Login", module)
+  .add("default", () => <Register {...data} isLoading={false} />)
+  .add("isLoading", () => <Register {...data} />)
+  .add("IsFormErrors", () => (
+    <Register {...data} isLoading={false} errors={true} />
+  ));

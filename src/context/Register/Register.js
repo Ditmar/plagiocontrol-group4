@@ -15,7 +15,7 @@ export const Register = ({ isLoading, errors, label }) => {
   return (
     <PageContainer className={styles["container"]}>
       <CardDefault className={styles["card"]}>
-        <div className={styles["sing-up"]}>
+        <div className={styles["sing-in"]}>
           <div className={styles["logo"]}>
             <div className={styles["ellipse"]}>
               <img src="/images/D.png" alt="D" />
@@ -50,6 +50,7 @@ export const Register = ({ isLoading, errors, label }) => {
                 <input className="button" type="submit" value={label} />
               </li>
             </form>
+            
           )}
         </div>
       </CardDefault>
