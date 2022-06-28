@@ -1,13 +1,10 @@
-import Navigation from './context/Navigation';
-import {Register} from "./context/Register/Register"
+import Navigation from "./context/Navigation";
 
 function App() {
   return (
-    
- <>  <Register isLoading={false} errors={{}} label="registrarse" /></>
-    
-     
- 
+    <>
+      <Navigation />
+    </>
   );
 }
 

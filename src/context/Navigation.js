@@ -23,7 +23,8 @@ const Navigation = () => {
                 </Route>
                 <Route path="/works" element={<Works />}>
                 </Route>
-                <Route path="/register" element={<Register />}>
+              
+                <Route path="/register" element={<Register  isLoading={false} errors={{}} label="registrarse" />}>
                 </Route>
                 <Route path="/login" element={<Login />}>
                 </Route>
