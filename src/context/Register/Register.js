@@ -21,9 +21,13 @@ export const Register = ({ isLoading, errors, label }) => {
               <img src="/images/D.png" alt="D" />
             </div>
           </div>
-          <h4>Plagio Control</h4>
-          <h2>Login Plagio Control</h2>
-          <h6>Enter you Email and password below </h6>
+          <span className={styles["text1"]}>
+            <span>Plagio Control</span>
+          </span>
+          <span className={styles["text2"]}>Login Plagio Control</span>
+          <span className={styles["text3"]}>
+            Enter your email and password below
+          </span>
           {isLoading ? (
             <div>Loading...</div>
           ) : (
@@ -50,7 +54,6 @@ export const Register = ({ isLoading, errors, label }) => {
                 <input className="button" type="submit" value={label} />
               </li>
             </form>
-            
           )}
         </div>
       </CardDefault>

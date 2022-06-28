@@ -6,7 +6,7 @@
   background-color: #363740;
 }
 
-.sing-in{
+.sing-in {
   width: 100%;
   height: 100%;
   display: flex;
@@ -31,7 +31,51 @@
   justify-content: center;
   background-color: #3751ff;
 }
-
+.text1 {
+  color: #a4a6b3;
+  width: 90%;
+  height: 24px;
+  font-size: 19px;
+  font-style: normal;
+  margin-top: 12px;
+  text-align: center;
+  font-family: Mulish;
+  font-weight: 700;
+  line-height: 24px;
+  border-color: #d41010;
+  border-width: 1px;
+  letter-spacing: 0.4px;
+}
+.text2 {
+  color: #252733;
+  width: 90%;
+  height: 30px;
+  font-size: 24px;
+  font-style: normal;
+  margin-top: 32px;
+  text-align: center;
+  font-family: Mulish;
+  font-weight: 700;
+  line-height: 30px;
+  border-color: #e80f0f;
+  border-width: 1px;
+  letter-spacing: 0.3px;
+}
+.text3 {
+  color: #9fa2b4;
+  width: 90%;
+  height: 20px;
+  font-size: 14px;
+  font-style: normal;
+  margin-top: 12px;
+  text-align: center;
+  font-family: Mulish;
+  font-weight: 400;
+  line-height: 20px;
+  border-color: #e20c0c;
+  border-width: 1px;
+  letter-spacing: 0.3px;
+}
 @media (max-width: 767px) {
   .card-singup {
     width: 65vh;
