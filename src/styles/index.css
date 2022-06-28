@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.inputErrors {
+  border: 1px solid red;
+}
+
+.button {
+  padding: 0.75rem 3.8rem;
+  background-color: #3751ff;
+  border: none;
+  color: #fff;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+}
+.button-large {
+  padding: 0.75rem 11.8rem;
+  background-color: #3751ff;
+  border: none;
+  color: #fff;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 8px;
+}
+
+.common-container {
+  display: flex;
+}
+.common-card {
+  display: flex;
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+}

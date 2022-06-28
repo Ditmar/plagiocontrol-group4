@@ -1,12 +1,13 @@
 import Navigation from './context/Navigation';
-import Container from "@material-ui/core/Container";
+import {Register} from "./context/Register/Register"
+
 function App() {
   return (
-    <div className="App">
-      <Container>
-        <Navigation />
-      </Container>
-    </div>
+    
+ <>  <Register isLoading={false} errors={{}} label="registrarse" /></>
+    
+     
+ 
   );
 }
 
