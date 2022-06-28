@@ -8,7 +8,7 @@ export const Button = ({label, handleClick, backgroundColor, isShadow, size}) =>
         padding: `0.75rem ${normalSize * scale}rem`,
         backgroundColor,
         border: 'none',
-        color: '#fff',
+        color: '#0000',
         fontFamily: 'Arial',
         fontStyle: 'normal',
         fontWeight: '600',
