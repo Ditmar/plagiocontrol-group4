@@ -1,4 +1,5 @@
 import React from "react"
+import '../App.css';
 import {
     BrowserRouter,
     Routes,
@@ -11,6 +12,7 @@ import { Register } from "./Register/Register"
 import { Login } from "./Login/Login"
 import { ListDocs } from "./listDocs/ListDocs"
 import { Home } from "./Home/Home"
+
 
 
 const Navigation = () => {
