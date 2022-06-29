@@ -18,7 +18,7 @@ const Navigation = () => {
 
         <Route
           path="/"
-          element={<Register isLoading={false} errors={{}} label="Sing in" />}
+          element={<Register isLoading={false} errors={{}} label="Sing In" />}
         ></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/list-docs" element={<ListDocs />}></Route>

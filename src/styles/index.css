@@ -23,12 +23,14 @@ body {
   line-height: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+  width: 61vh;
 }
 .button-large {
   padding: 0.75rem 11.8rem;
   background-color: #3751ff;
   border: none;
   color: #fff;
+
   font-family: "Arial";
   font-style: normal;
   font-weight: 600;
@@ -46,7 +48,11 @@ body {
   border-radius: 8px;
   background-color: #ffffff;
 }
-.common-text {
+.common-text-default {
   font-family: "Mulish";
   font-style: normal;
+}
+.common-textfield-label-icon {
+  width: 61vh;
+  height: 8.1vh;
 }

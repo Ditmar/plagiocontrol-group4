@@ -9,7 +9,7 @@ const data = {
   label: "Sing in",
   errors: false,
 };
-storiesOf("Login", module)
+storiesOf("Register", module)
   .add("default", () => <Register {...data} isLoading={false} />)
   .add("isLoading", () => <Register {...data} />)
   .add("IsFormErrors", () => (
