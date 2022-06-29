@@ -7,6 +7,7 @@ import { CardDefault } from "../../ui/components/card-default/card-default";
 import { PageContainer } from "../../ui/components/page-container/page-container";
 
 import useForm from "../../hooks/useForm";
+import { TextCommon } from "../../ui/components";
 export const Register = ({ isLoading, errors, label }) => {
   const [handlerChangeForm] = useForm({ username: "", password: "" });
   const onSubmit = (event) => {
@@ -21,13 +22,14 @@ export const Register = ({ isLoading, errors, label }) => {
               <img src="/images/D.png" alt="D" />
             </div>
           </div>
-          <span className={styles["text1"]}>
-            <span>Plagio Control</span>
-          </span>
-          <span className={styles["text2"]}>Login Plagio Control</span>
-          <span className={styles["text3"]}>
+          <TextCommon className={styles["text1"]}>Plagio Control</TextCommon>
+          <TextCommon className={styles["text2"]}>
+            Login Plagio Control
+          </TextCommon>
+          <TextCommon className={styles["text3"]}>
             Enter your email and password below
-          </span>
+          </TextCommon>
+
           {isLoading ? (
             <div>Loading...</div>
           ) : (
