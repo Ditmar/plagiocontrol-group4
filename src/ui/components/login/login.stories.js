@@ -6,7 +6,7 @@ import { Login } from "./login";
 
 const data = {
     isLoading: true,
-    label: "Enviar", 
+    label: "Log In", 
     errors: false
 }
 storiesOf('Login', module)

@@ -9,56 +9,45 @@ export const Login = ({isLoading, errors, label}) => {
     }
     return (
         <div className="containerPrincipal">
-            <div className="containerSecundario">
-                {isLoading? (<div>Loading...</div>):(<form onSubmit={onSubmit}>
-                    <div>
-                        <div className="containerT1">
-                                <label className="containerD"></label>
-                        </div>
-                        <br/>
-                        <label className="Plagio">Plagio Control</label>
-                        <label className="LPlagioControl">Login Plagio Control</label><br/><br/>
-                        <label className="Enter">Enter your email and password below</label><br/><br/>
-
-                        <label className="Email">
-                            EMAIL
-                        </label>
-                        <br/>
+            {isLoading?(<div>Loading</div>):
+            (<form onSubmit={onSubmit} >
+                <div className="containerSecundario">
+                    <div className="containerT1">
+                        <div className="containerD"></div>
+                    </div>
+                    <label className="plagiarism">Plagio Control</label>
+                    <label className="containerTitle">Login Plagio Control</label>
+                    <label className="Enter">Enter your email and password</label>
+                    <label className="Email">EMAIL</label>
+                    <div className="">
                         <input
-                            type="txt"
-                            className="form-control1"
-                            placeholder="Email addres"
-
-                        /><br/><br/>
+                            type="text"
+                            name="email"
                         
-                        <label className="Password">
-                            PASSWORD
-                        </label>
-                        <label >
-                           <a className="Forgot"> Forgot password?</a>
-                        </label>
-                        <br/>
-                        <div className="">
+                            placeholder="Email addres"
+                            className={errors?"inputErrors1":"form-control1"}
+                            onChange={handlerChangeForm}                            
+                        ></input>                    
+                    </div>
+                    <label className="Password">PASSWORD</label>
+                    <label className="Forgot"><a>Forgot password?</a></label>
+                    <div className="">
                         <input
                             type="password"
-                            className="form-control2"
+                            name="password"
+                            
                             placeholder="Password"
-                        /></div><br/><br/>
-                        
-                        <br/>
-                        <button 
-                        className="btn btn-primary"
-                        type="submit" 
-                        value={label}
-                        >Log In</button>
-                        <br/><br/>
-                        <label className="Cuenta">No tienes una cuenta? <a className="Crea">Sing up </a></label>
-                        
-                        
+                            className={errors?"inputErrors2":"form-control2"}
+                        ></input>
                     </div>
-                </form>)}
-                
-            </div>
+                    
+                    <input className="btn btn-primary" type="submit" value={label}></input>
+                    <label className="Bill">No tienes una cuentas?</label>
+                    <label className="creates"><a>Sign up</a></label>
+                    
+                </div>
+            </form> )}
+            
         </div>
     );
 }
