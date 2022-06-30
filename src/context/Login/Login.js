@@ -2,49 +2,46 @@ import React from 'react';
 export const Login = () => {
     return (
         <div className="containerPrincipal">
-            <div className="containerSecundario">
-                <div className="containerTercero"><br/><br/><br/>
-                    <div className="form-group">
-                        <div className="containerT1">
-                            <label className="containerD"></label>
-                        </div>
-                        <br/>
-                        <label className="Plagio">Plagio Control</label>
-                        <br/><br/>
-                        <label className="LPlagioControl">Login Plagio Control</label><br/><br/>
-                        <label className="Enter">Enter your email and password below</label><br/><br/>
-                        <label className="Email">
-                            EMAIL
-                        </label>
-                        <br/>
+            {isLoading?(<div>Loading</div>):
+            (<form onSubmit={onSubmit} >
+                <div className="containerSecundario">
+                    <div className="containerT1">
+                        <div className="containerD"></div>
+                    </div>
+                    <label className="plagiarism">Plagio Control</label>
+                    <label className="containerTitle">Login Plagio Control</label>
+                    <label className="Enter">Enter your email and password</label>
+                    <label className="Email">EMAIL</label>
+                    <div className="">
                         <input
-                            type="txt"
-                            className="form-control1"
+                            type="text"
+                            name="email"
+                        
                             placeholder="Email addres"
-
-                        />
-                        <br/>
-                        <label className="Password">
-                            PASSWORD
-                        </label>
-                        <label >
-                           <a className="Forgot"> Forgot password?</a>
-                        </label>
-                        <br/>
+                            className={errors?"inputErrors":"form-control1"}
+                            onChange={handlerChangeForm}                            
+                        ></input>                    
+                    </div>
+                    <label className="Password">PASSWORD</label>
+                    <label className="Forgot"><a>Forgot password?</a></label>
+                    <div className="">
                         <input
                             type="password"
-                            className="form-control2"
+                            name="password"
                             placeholder="Password"
+                            className={errors?"inputErrors":"form-control2"}
+                            
                         />
-                        <br/>
-                        <button className="btn btn-primary">Log In</button>
-                        <br/><br/>
-                        <label className="Cuenta">No tienes una cuenta? <a className="Crea">Sing up </a></label>
-
+                       
                     </div>
+                    
+                    <input className="btn btn-primary" type="submit" value={label} onClick="onSubmit" ></input>
+                    <label className="Bill">No tienes una cuentas?</label>
+                    <label className="creates"><a>Sign up</a></label>
+                    
                 </div>
-            </div>
-
+            </form> )}
+            
         </div>
     )
 }
