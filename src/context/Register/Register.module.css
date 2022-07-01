@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  height: 49.315rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #363740;
+}
+
+.sing-in {
+  width: 38rem;
+  height: 39.438rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  width: 38rem;
+  height: 39.438rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 2.5rem;
+}
+
+.ellipse {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-radius: 31.25rem;
+  justify-content: center;
+  background-color: #3751ff;
+}
+
+.text1 {
+  color: #a4a6b3;
+  font-size: 1.188rem;
+  margin-top: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.025rem;
+}
+
+.text2 {
+  color: #252733;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  letter-spacing: 0.019rem;
+}
+
+.text3 {
+  color: #9fa2b4;
+
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0.019rem;
+}
+
+.form {
+  width: 30.875rem;
+  height: 22rem;
+  position: relative;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+.textefield-label-icon-default {
+  margin-top: 1.25rem;
+  width: 30.875rem;
+
+  display: flex;
+  margin-top: 0;
+  flex-direction: column;
+}
+
+.text-email {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 0.938rem;
+  letter-spacing: 0.019rem;
+  text-transform: uppercase;
+  color: #9fa2b4;
+  text-align: left;
+}
+
+.input {
+  border: 0.063rem solid #9fa2b4;
+  padding-left: 1rem;
+  height: 2.625rem;
+  margin-top: 0.313rem;
+  margin-bottom: 0.938rem;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-align: left;
+  line-height: 1.25rem;
+  letter-spacing: 0.019rem;
+  border-radius: 0.5rem;
+  color: #4b506d;
+
+  opacity: 0.4;
+}
+
+.text-passw {
+  margin-top: 0.313rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 0.938rem;
+  letter-spacing: 0.019rem;
+  text-transform: uppercase;
+  color: #9fa2b4;
+  text-align: left;
+}
+
+.forgot-password {
+  top: 86px;
+  padding-bottom: 1rem;
+  right: 0px;
+  width: 5.313rem;
+  height: 0.938rem;
+  position: absolute;
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 0.813rem;
+  color: #9fa2b4;
+  text-align: right;
+  letter-spacing: 0.006rem;
+}
+.login {
+  margin-top: 0.4rem;
+
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.01rem;
+  color: #9fa2b4;
+}
+.log-in {
+  margin-left: 1rem;
+  color: #3751ff;
+}
+@media (max-width: 47rem) {
+  .card {
+    width: 28rem;
+    height: 39rem;
+  }
+  div .login {
+    width: 26rem;
+  }
+  .sing-in {
+    width: 28rem;
+    height: 39rem;
+  }
+
+  .form {
+    width: 26rem;
+  }
+
+  .textefield-label-icon-default {
+    width: 26rem;
+  }
+}
