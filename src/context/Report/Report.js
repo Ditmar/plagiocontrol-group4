@@ -1,6 +1,6 @@
 import React from "react";
 import cover from './cover.png'
-export const CardDocument = ({title='Autor. Ing. Raul Gomez'}) => {
+export const Card = ({title='Autor. Ing. Raul Gomez'}) => {
     const bodyCard = {
         width: '31.188rem',
         height: '19.188rem',

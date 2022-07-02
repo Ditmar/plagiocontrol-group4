@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import cover from './cover.png'
 export const CardDocument = ({title='Autor. Ing. Raul Gomez'}) => {
     const bodyCard = {
