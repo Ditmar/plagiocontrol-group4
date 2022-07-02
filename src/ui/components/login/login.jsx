@@ -11,7 +11,7 @@ export const Login = ({isLoading, errors, label}) => {
         <div>
             {isLoading? (<div>Loading...</div>):(<form onSubmit={onSubmit}>
                 <ul>
-                    <li>z
+                    <li>
                         <input type="text" name="username" onChange={handlerChangeForm} placeholder="User name" className={errors?"inputErrors": ""}/>
                     </li>
                     <li>
