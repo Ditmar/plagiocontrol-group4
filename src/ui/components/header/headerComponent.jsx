@@ -1,9 +1,9 @@
-import { React } from "react";
+import React from 'react';
 import '../header/header.css';
 import { Perfil } from './SubComponents/Perfil';
-import { Search } from "./SubComponents/Search";
-import { Title} from "./SubComponents/Title"
-import { Notifications } from "./SubComponents/Notifications";
+import { Search } from './SubComponents/Search';
+import { Title} from './SubComponents/Title';
+import { Notifications } from './SubComponents/Notifications';
 export const Head = () => {
     const User= {
         Title: 'Overview',

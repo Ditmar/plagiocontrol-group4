@@ -1,75 +1,75 @@
 .header{
     position: absolute;
-    width: 1120px;
-    height: 44px;
+    width: 70rem;
+    height: 2.75rem;
     float: right;
-    margin: 30px;
+    margin: 1.875rem;
 }
 .title{
     position: absolute;
-    height: 34px;
-    left: 0px;
-    right: 351px;
+    height: 2.125rem;
+    left: 0rem;
+    right: 21.938rem;
     text-align: left;
-    top: calc(50% - 34px);
+    top: calc(50% - 2.125rem);
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    letter-spacing: 0.3px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    letter-spacing: 0.019rem;
     color: #252733;
 }
 .search{
     position: absolute;
-    width: 413px;
-    height: 24px;
-    left: 400px;
-    top: 13px;
+    width: 25.813rem;
+    height: 1.5rem;
+    left: 25rem;
+    top: 0.813rem;
     background: #D9D9D9;
     border: 0;
 }
 .Bsearch{
     background: url(../Img/lupa.png) no-repeat;
-    background-size: 20px;
+    background-size: 1.25rem;
     position: absolute;
-    width: 24px;
-    height: 24px;
-    right: 271px;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 16.938rem;
     border: 0;
-    top: calc(50% - 16px/2);
+    top: calc(50% - 1rem/2);
 }
-.notifi{
+.notify{
     position: absolute;
     background: url(../Img/notific.png) no-repeat;
-    background-size: 18px;
+    background-size: 1.125rem;
     border: 0;
-    width: 24px;
-    height: 24px;
-    right: 231px;
-    top: calc(50% - 16px/2);
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 14.438rem;
+    top: calc(50% - 1rem/2);
 }
 .name{
     position: absolute;
-    width: 109px;
-    height: 18px;
-    right: 58px;
-    top: calc(50% - 18px);
+    width: 6.813rem;
+    height: 1.125rem;
+    right: 3.625rem;
+    top: calc(50% - 1.125rem);
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     text-align: right;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.013rem;
     color: #252733;
 }
 .photo{
     position: absolute;
-    width: 44px;
-    height: 44px;
-    left: 1075px;
-    top: 0px;
-    border-left: 9.33px;
-    border-radius: 100px;
+    width: 2.75rem;
+    height: 2.75rem;
+    left: 67.188rem;
+    top: 0rem;
+    border-left: 0.583rem;
+    border-radius: 6.25rem;
 }
