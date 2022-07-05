@@ -16,19 +16,10 @@ import vec7 from "./img/vec7.svg";
 import { string } from "prop-types";
 
 export const Sidebar = ({tittle}) => {
-    let tam = 
-    setInterval(()=>{
-        if(window.innerWidth<720){
-           tam = false;
-        }
-        else {
-            tam = true; 
-        }
-    },1000)
 
     return(
-        <div>
-        {tam?(<div className="sidebar"> 
+      
+    <div className="sidebar"> 
      <div className="logo">
            <Logo/>
            </div>
@@ -68,8 +59,8 @@ export const Sidebar = ({tittle}) => {
             </li>
         </ul>
             
-    </div>):(<div>hola</div>)}
     </div>
+   
     )
 }
 
