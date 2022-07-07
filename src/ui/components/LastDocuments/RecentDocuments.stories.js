@@ -1,5 +1,5 @@
 import React from "react";
-import RecentDocuments from "./RecentDocuments";
+import {RecentDocuments} from "./RecentDocuments";
 export default {
   title: "./RecentDocuments",
   component: RecentDocuments,
