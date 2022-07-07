@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { Row } from 'simple-flexbox'; 
 import { StyleSheet, css } from 'aphrodite/no-important'; 
-import LastDocument from './LastDocument'; 
+import {LastDocument} from './LastDocument'; 
  
 const styles = StyleSheet.create({ 
     itemTitle: { 
@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
         fontStyle: 'normal', 
         fontWeight: '600', 
         fontSize: 14, 
-        lineHeight: '1.25rem', 
-        letterSpacing: '0.013rem', 
+        lineHeight: '20px', 
+        letterSpacing: '0.2px', 
         color: '#252733' 
     }, 
    
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
         fontStyle: 'normal', 
         fontWeight: '600', 
         fontSize: 14, 
-        lineHeight: '1.25rem', 
-        letterSpacing: '00.013rem', 
+        lineHeight: '20px', 
+        letterSpacing: '0.2px', 
         color: '#3751FF', 
         textAlign: 'right', 
         cursor: 'pointer',  
@@ -31,10 +31,9 @@ const styles = StyleSheet.create({
     }, 
    
 }); 
+export const ItemsDocuments =({containerStyles})=> {  
  
-class ItemsDocuments extends React.Component { 
- 
-    renderStat(title, value, link) { 
+    function renderStat(title, value, link) { 
         return (<Row flexGrow={1} horizontal="space-between" vertical="center"> 
             <span className={css(styles.itemTitle)}>{title}</span> 
             <Row > 
@@ -44,19 +43,17 @@ class ItemsDocuments extends React.Component {
         </Row>); 
     } 
  
-    render() { 
+    
         return ( 
-            <LastDocument containerStyles={this.props.containerStyles} title="Ultimos Documentos Publicados" 
+            <LastDocument containerStyles={containerStyles} title="Ultimos Documentos Publicados" 
               subtitle="Group:" subtitleTwo="Support" 
                 items={[ 
-                    this.renderStat('Análisis de la investigación sobre radio en Bolivia ...',  '321 Pag.', 'View details' ), 
-                    this.renderStat('Análisis bibliométrico y de redes sociales en tesis ...', '120 Pag.', 'View details' ), 
-                     
-                     
+                renderStat('Análisis de la investigación sobre radio en Bolivia ...',  '321 Pag.', 'View details' ), 
+                renderStat('Análisis bibliométrico y de redes sociales en tesis ...', '120 Pag.', 'View details' ), 
+                renderStat('Análisis bibliométrico y de redes sociales en tesis ...', '120 Pag.', 'View details' ), 
+
+                 
                 ]}   
             /> 
         ); 
-    } 
-} 
- 
-export default ItemsDocuments;
+    }
