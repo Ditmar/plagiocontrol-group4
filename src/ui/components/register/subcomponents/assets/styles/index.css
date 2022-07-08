@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Roboto', sans-serif !important;
   margin: 0;
   padding: 0;
-  height: 47.3rem;
+  height: 44rem;
 }
 .inputErrors {
   border: 1px solid red;
@@ -17,7 +17,7 @@ body {
   background-color: #3751ff;
   border: none;
   color: #fff;
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
   font-weight: 600;
   font-size: 0.875rem;
@@ -32,8 +32,7 @@ body {
   background-color: #3751ff;
   border: none;
   color: #fff;
-
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
   font-weight: 600;
   font-size: 0.875rem;
@@ -46,19 +45,17 @@ body {
   position: relative;
 }
 .common-card {
-  position: relative;
-  box-shadow: 0px 0px 40px 0px #d4d4d4;
+  position: relative; 
   border: 0.063rem solid #dfe0eb;
   border-radius: 0.5rem;
   background-color: #ffffff;
 }
 .common-text-default {
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
 }
 .common-textfield-label-icon {
   width: 30.875rem;
   height: 4rem;
 }
-@media (max-width: 47rem) {
-}
+

@@ -1,11 +1,8 @@
-import Navigation from "./context/Navigation";
-import Container from "@material-ui/core/Container";
+import { Register } from './ui/components/register/Register';
 function App() {
   return (
     <div>
-      <Container>
-        <Navigation />
-      </Container>
+      <Register isLoading={false} label='Sing In' />
     </div>
   );
 }
