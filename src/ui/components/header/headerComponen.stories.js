@@ -1,12 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Head } from './headerComponent';
-export default {
-    title: 'ui/components/header',
-    component: Head
-}
+import Head from './headerComponent';
 
-const Template = args => <Head {...args}/>
+const data = {
+    
+    file: false,
+};
+
 storiesOf('Head', module)
-.add('Head', () => <Head {...args} />)
-export const Header = Template();
+.add('Head', () => <Head {...data} file={false}/>)

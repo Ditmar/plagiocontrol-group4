@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../header/header.css';
 import { Perfil } from './SubComponents/Perfil';
 import { Search } from './SubComponents/Search';
@@ -19,3 +20,9 @@ export const Head = () => {
         </div>
     );
 }
+
+Head.propTypes = {
+    file: PropTypes.bool
+}
+
+export default Head;
