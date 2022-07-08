@@ -1,7 +1,7 @@
-import React from "react";
-import Cards from "./Cards";
+import React from 'react';
+import {Cards} from './Cards';
 export default {
-  title: "./Cards",
+  title: './Cards',
   component: Cards,
   //argTypes: { handleClick: {action: 'handleClick'}}
 };

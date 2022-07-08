@@ -2,7 +2,7 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
 
-import ContentComponent from './ContentComponent';
+import {ContentComponent} from './ContentComponent';
 import '../../../App.css';
 
 const styles = StyleSheet.create({
@@ -18,15 +18,9 @@ const styles = StyleSheet.create({
         padding: 30
     }
 });
-class Cards extends React.Component {
+export const Cards =()=>{
 
     
-
- 
-
-    resize = () => this.forceUpdate();
-
-    render() {
      
         return (
             <Row className={css(styles.container)}>
@@ -40,6 +34,5 @@ class Cards extends React.Component {
             </Row>
         );
     }
-}
 
-export default Cards;
+
