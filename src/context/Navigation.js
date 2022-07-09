@@ -1,17 +1,17 @@
-import React from "react"
+import React from 'react'
 import {
     BrowserRouter,
     Routes,
     Route,
 } from "react-router-dom";
 
-import { CardDocument } from "./Works/Works"
+import { Works } from "./Works/Works"
 import { Review } from "./Review/Review"
 import { Register } from "./Register/Register"
 import { Login } from "./Login/Login"
 import { ListDocs } from "./listDocs/ListDocs"
 import { Home } from "./Home/Home"
-import { Card } from "./Report/Report"
+import { Report } from "./Report/Report"
 
 const Navigation = () => {
     return (
@@ -21,7 +21,7 @@ const Navigation = () => {
                 </Route>
                 <Route path="/review" element={<Review />}>
                 </Route>
-                <Route path="/works" element={<CardDocument />}>
+                <Route path="/works" element={<Works />}>
                 </Route>
                 <Route path="/register" element={<Register />}>
                 </Route>
@@ -29,7 +29,7 @@ const Navigation = () => {
                 </Route>
                 <Route path="/list-docs" element={<ListDocs />}>
                 </Route>
-                <Route path="/report" element={<CardDocument />}>
+                <Route path="/report" element={<Report />}>
                 </Route>
             </Routes>
         </BrowserRouter>
