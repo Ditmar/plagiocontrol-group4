@@ -5,48 +5,35 @@
         display: none;
     }
 }
-#check {
-   
-    display: none;
 
-}
 @media screen and (max-width: 763px){
     .sidebar{
         display: none;
       
     }
-    .sidebar a{
-        display: block;
-    }
-    label{
-        display: block;
-        cursor:pointer;
+   
+}
 
-    }
-    #check:checked+ .sidebar{
-        display: block;
-        
-    }
-  
-    
+.phonefalse{
+     background-color: aqua;
 }
 
 .sidebar{
     background-color: #363740;
-    position: relative;
+    position: absolute;
     width: 15.938rem;
-    height: 38rem;
-    
+    height: 100%;    
 }
 
 .tittle{
-    position: absolute;
-    width: 8.375px;
+    position: relative;
+    width: 8,125rem;
     height: 1.5px;
     left: 4.7rem;
     top: 2.563rem; 
     color: #A4A6B3;
-    font-family: 'Mulish';    
+    font-family: 'Mulish';  
+    size: 19px;  
 }
 
 .logo{
@@ -67,6 +54,7 @@ li{
 
 }
 a{
+    text-decoration: none;
     position: absolute;
     height: 1.25rem;
     left: 4.5rem;

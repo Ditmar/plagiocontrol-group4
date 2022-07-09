@@ -5,7 +5,7 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    Link
+    Link,
 } from "react-router-dom";
 import Logo from "./img/logo";
 import vec1 from "./img/vec1.svg";
@@ -15,24 +15,32 @@ import vec4 from "./img/vec4.svg";
 import vec5 from "./img/vec5.svg";
 import vec6 from "./img/vec6.svg";
 import vec7 from "./img/vec7.svg";
-import { string } from "prop-types";
-import { ListDocs } from "../../../context/listDocs/ListDocs";
-import { Works } from "../../../context/Works/Works";
-import { Home } from "../../../context/Home/Home";
-import { Review } from "../../../context/Review/Review";
-import { BurguerButton } from "./components/BurguerButton";
+// import { BurguerButton } from "./components/BurguerButton";
+import bar from "./img/bar.jpeg";
+import { styled } from "@material-ui/core";
 
 export const Sidebar = ({tittle}) => {
     const [clicked, setClicked]=useState(false);
     const handleClick = () => {
         setClicked(!clicked)
+        
     }
+
+ const [burguer, setBurguer]=React.useState(false);
+ const switchBurguer=()=>setBurguer(!burguer);   
+//  console.log(burguer);
+//  if(burguer===true){
+//     console.log("hola");
+//  }
+
     return(
         <>
-        <div className="burguer" >
+        {/* <div className="burguer" >
             <BurguerButton/>
-        </div>      
-    <div className="sidebar"> 
+        </div>       */}
+        <img src={bar} id='burguer' onClick={switchBurguer}></img>
+   
+    <div className={` sidebar ${ burguer ? 'open' : ''}   ${ console.log(burguer) }     `}> 
             <div className="logo">
                 <Logo/>
             </div>
@@ -42,23 +50,23 @@ export const Sidebar = ({tittle}) => {
             <ul className="menu">
                 <li>
                     <img src={vec1}></img>
-                    <a>Inicio</a>
+                    <a href="/">Inicio</a>
                 </li>
                 <li>
                     <img src={vec2}></img>
-                    <a>Trabajo</a>
+                    <a href="/works">Trabajo</a>
                 </li>
                 <li>
                     <img src={vec3}></img>
-                    <a>Revisar Tesis</a>
+                    <a href="/review">Revisar Tesis</a>
                 </li>
                 <li>
                     <img src={vec4}></img>
-                    <a>Listar Tesis</a>
+                    <a href="/list-docs">Listar Tesis</a>
                 </li>
                 <li>
                     <img src={vec5}></img>
-                    <a>Publicar Tesis</a>
+                    <a href="/register">Publicar Tesis</a>
                 </li>
                 <li>
                     <img src={vec6}></img>
