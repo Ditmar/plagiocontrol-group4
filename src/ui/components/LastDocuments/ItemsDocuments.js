@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
         fontStyle: 'normal', 
         fontWeight: '600', 
         fontSize: 14, 
-        lineHeight: '20px', 
-        letterSpacing: '0.2px', 
+        lineHeight: '1.25rem', 
+        letterSpacing: '0.013rem', 
         color: '#252733' 
     }, 
    
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
         fontStyle: 'normal', 
         fontWeight: '600', 
         fontSize: 14, 
-        lineHeight: '20px', 
-        letterSpacing: '0.2px', 
+        lineHeight: '1.25rem', 
+        letterSpacing: '0.013rem', 
         color: '#3751FF', 
         textAlign: 'right', 
         cursor: 'pointer',  
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
 export const ItemsDocuments =({containerStyles})=> {  
  
     function renderStat(title, value, link) { 
-        return (<Row flexGrow={1} horizontal="space-between" vertical="center"> 
+        return (<Row flexGrow={1} horizontal='space-between' vertical='center'> 
             <span className={css(styles.itemTitle)}>{title}</span> 
             <Row > 
             <span className={css(styles.link)}>{link}</span> 
@@ -45,8 +45,8 @@ export const ItemsDocuments =({containerStyles})=> {
  
     
         return ( 
-            <LastDocument containerStyles={containerStyles} title="Ultimos Documentos Publicados" 
-              subtitle="Group:" subtitleTwo="Support" 
+            <LastDocument containerStyles={containerStyles} title='Ultimos Documentos Publicados'
+              subtitle='Group:' subtitleTwo='Support' 
                 items={[ 
                 renderStat('Análisis de la investigación sobre radio en Bolivia ...',  '321 Pag.', 'View details' ), 
                 renderStat('Análisis bibliométrico y de redes sociales en tesis ...', '120 Pag.', 'View details' ), 

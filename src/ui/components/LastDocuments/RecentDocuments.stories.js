@@ -1,7 +1,7 @@
-import React from "react";
-import {RecentDocuments} from "./RecentDocuments";
+import React from 'react';
+import {RecentDocuments} from './RecentDocuments';
 export default {
-  title: "./RecentDocuments",
+  title: './RecentDocuments',
   component: RecentDocuments,
 };
 

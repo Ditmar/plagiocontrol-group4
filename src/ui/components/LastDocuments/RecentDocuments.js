@@ -1,20 +1,20 @@
-import React from "react"; 
-import { Column, Row } from "simple-flexbox"; 
-import { StyleSheet, css } from "aphrodite"; 
+import React from 'react'; 
+import { Column, Row } from 'simple-flexbox'; 
+import { StyleSheet, css } from 'aphrodite'; 
  
-import { LastsDocuments } from "./LastsDocuments"; 
-import "../../../App.css"; 
+import { LastsDocuments } from './LastsDocuments'; 
+import '../../../App.css'; 
  
 const styles = StyleSheet.create({ 
   container: { 
-    height: "100%", 
-    minHeight: "100vh", 
+    height: '100%', 
+    minHeight: '39.063rem', 
   }, 
   content: { 
     marginTop: 54, 
   }, 
   mainBlock: { 
-    backgroundColor: "#F7F8FC", 
+    backgroundColor: '#F7F8FC', 
     padding: 30, 
   }, 
 }); 

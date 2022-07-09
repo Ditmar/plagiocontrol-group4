@@ -1,16 +1,16 @@
-import React from "react"; 
-import { Column, Row } from "simple-flexbox"; 
-import { StyleSheet, css } from "aphrodite/no-important"; 
+import React from 'react'; 
+import { Column, Row } from 'simple-flexbox'; 
+import { StyleSheet, css } from 'aphrodite/no-important'; 
  
 const styles = StyleSheet.create({ 
   container: { 
-    backgroundColor: "#FFFFFF", 
-    border: "1px solid #DFE0EB", 
+    backgroundColor: '#FFFFFF', 
+    border: '0.063rem solid #DFE0EB', 
     borderRadius: 4, 
-    padding: "24px 32px 12px 32px", 
+    padding: '1.5rem 2rem 0.75rem 2rem', 
   }, 
   containerMobile: { 
-    padding: "12px 16px 6px 16px !important", 
+    padding: '0.75rem 1rem 0.375rem 1rem !important', 
   }, 
   itemContainer: { 
     marginLeft: -32, 
@@ -20,9 +20,9 @@ const styles = StyleSheet.create({
     paddingBottom: 18, 
     paddingTop: 18, 
     maxHeight: 22, 
-    borderBottom: "1px solid #DFE0EB", 
-    ":last-child": { 
-      borderBottom: "none", 
+    borderBottom: '0.063rem solid #DFE0EB', 
+    ':last-child': { 
+      borderBottom: 'none', 
     }, 
   }, 
   itemContainerMobile: { 
@@ -33,26 +33,26 @@ const styles = StyleSheet.create({
   }, 
  
   subtitle: { 
-    fontFamily: "Muli", 
-    fontStyle: "normal", 
-    fontWeight: "normal", 
+    fontFamily: 'Muli', 
+    fontStyle: 'normal', 
+    fontWeight: 'normal', 
     fontSize: 12, 
-    lineHeight: "16px", 
-    letterSpacing: "0.1px", 
-    color: "#9FA2B4", 
+    lineHeight: '1rem', 
+    letterSpacing: '0.006rem', 
+    color: '#9FA2B4', 
   }, 
   subtitle2: { 
-    color: "#252733", 
+    color: '#252733', 
     marginLeft: 2, 
   }, 
   title: { 
-    fontFamily: "Muli", 
-    fontStyle: "normal", 
-    fontWeight: "bold", 
+    fontFamily: 'Muli', 
+    fontStyle: 'normal', 
+    fontWeight: 'bold', 
     fontSize: 19, 
-    lineHeight: "24px", 
-    letterSpacing: "0.4px", 
-    color: "#252733", 
+    lineHeight: '1.5rem', 
+    letterSpacing: '0.025rem', 
+    color: '#252733', 
   }, 
 }); 
  
@@ -76,7 +76,7 @@ export const LastDocument = (props) => {
       className={css(styles.container, containerStyles)} 
       breakpoints={{ 426: css(styles.containerMobile) }} 
     > 
-      <Row horizontal="space-between"> 
+      <Row horizontal='space-between'> 
         <Column> 
           <span className={css(styles.title)}>{title}</span> 
           <Row style={{ marginTop: 8, marginBottom: 16 }}> 
