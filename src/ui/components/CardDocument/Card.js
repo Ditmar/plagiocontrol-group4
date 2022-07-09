@@ -1,7 +1,6 @@
 import React from 'react'
 import cover from './Cover/cover.png'
-import { PropTypes } from 'prop-types'
-export const CardDocument = ({name_Autor, title_Card, number_Pages }) => {
+const CardDocument = ({nameAutor='Autor. Ing. Raul Gomez'}) => {
     const bodyCard = {
         width: '31.188rem',
         height: '19.188rem',
@@ -107,7 +106,7 @@ export const CardDocument = ({name_Autor, title_Card, number_Pages }) => {
       <div style={bodyCard}>
         <div>
             <tr style={divider}></tr>
-            <h1 style={autor}>{name_Autor}</h1> 
+            <h1 style={autor}>{nameAutor}</h1> 
             <td style={link}>
                 <a style={linkViewDetails} href=''>Ver detalles</a>
                 <tr>
@@ -118,8 +117,8 @@ export const CardDocument = ({name_Autor, title_Card, number_Pages }) => {
               <table>
                 <tbody>
                   <tr style={table}>
-                    <div style={titleCard}>{title_Card}</div>
-                    <td style={numberPage}>{number_Pages}</td>   
+                    <div style={titleCard}>Análisis de investigación sobre radio en Bolivia ...</div>
+                    <td style={numberPage}>321 Pag.</td>   
                   </tr>
                 </tbody>      
               </table>
@@ -127,10 +126,5 @@ export const CardDocument = ({name_Autor, title_Card, number_Pages }) => {
         </div>
       </div>
   )
-}
-CardDocument.propTypes = {
-  name_Autor: PropTypes.string,
-  title_Card: PropTypes.string,
-  number_Pages: PropTypes.string  
 }
 export default CardDocument;
