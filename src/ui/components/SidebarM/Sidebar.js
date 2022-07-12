@@ -97,7 +97,7 @@ const NavContainer = styled.nav`
             position: absolute;
             width: 8.375rem;
             height: 1.5rem;
-            left: 0rem;
+            left: -0.8rem;
             top: 2.313rem; 
         }
     
@@ -105,7 +105,7 @@ const NavContainer = styled.nav`
             position: relative;
             width: 8,125rem;
             height: 1.5px;
-            left: 1.7rem;
+            left: 1.1rem;
             top: 2.563rem; 
             color: #A4A6B3;
             font-family: 'Mulish';  
@@ -146,13 +146,17 @@ const NavContainer = styled.nav`
             width: 15.938rem;
             height: 0.063rem;
             background-color: #A4A6B3;
+            right: 2.515rem; 
         }
         .settings{
             position: absolute;
             top: 23rem;
+            right: 2.515rem; 
         }
         li:hover{
-            background-color: #3e4049;   
+            background-color: #3e4049;
+            position: relative;
+            right: 2.515rem;  
         }
         a:hover{
             opacity: 1;
