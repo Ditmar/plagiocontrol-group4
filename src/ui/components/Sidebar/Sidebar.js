@@ -137,6 +137,7 @@ const NavContainer = styled.nav`
                     opacity: 0.6;
                     margin-top: 1.125rem;
                     font-family: 'Mulish';
+                    text-align: left;
                 }
             }
         }
@@ -160,7 +161,7 @@ const NavContainer = styled.nav`
         @media(min-width: 768px)
         {
         width: 15.938rem;
-        height: 100%;
+        height: 38rem;
         display: block;
         position: absolute;
         margin-left: 4px;
@@ -175,7 +176,7 @@ const NavContainer = styled.nav`
     }
     .sidebar.active{
         width: 15.938rem;
-        height: 100%;
+        height: 38rem;
         display: block;
         position: absolute;
         margin-left: 5px;
