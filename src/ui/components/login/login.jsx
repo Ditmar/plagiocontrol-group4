@@ -1,7 +1,7 @@
-import { React } from "react";
+import { React } from 'react';
 import PropTypes from 'prop-types';
 import '../../../App.css';
-import useForm from "../../../hooks/useForm";
+import useForm from '../../../hooks/useForm';
 export const Login = ({isLoading, errors, label}) => {
     const [ handlerChangeForm] = useForm({username:"" , password: ""});
     const onSubmit = (event) => {
