@@ -97,7 +97,7 @@ const NavContainer = styled.nav`
             position: absolute;
             width: 8.375rem;
             height: 1.5rem;
-            left: 0rem;
+            left: -0.8rem;
             top: 2.313rem; 
         }
     
@@ -105,7 +105,7 @@ const NavContainer = styled.nav`
             position: relative;
             width: 8,125rem;
             height: 1.5px;
-            left: 1.7rem;
+            left: 1.1rem;
             top: 2.563rem; 
             color: #A4A6B3;
             font-family: 'Mulish';  
@@ -116,31 +116,29 @@ const NavContainer = styled.nav`
             position: absolute;
             top: 8rem;
             list-style: none;
+    
             li{
                 width: 15.938rem;
                 height: 3.5rem;
-                color: blue;
+            
                 img{
                     position: absolute;
                     left: 2rem;
                     margin-top: 1.125rem;
-                    
                 }
     
                 a{
                     text-decoration: none;
                     position: absolute;
                     height: 1.25rem;
-                    left: 0rem;
+                    left: 4.5rem;
                     right: 1.5rem;
                     color: #DDE2FF;
                     opacity: 0.6;
                     margin-top: 1.125rem;
                     font-family: 'Mulish';
-                    
+                    text-align: left;
                 }
-               
-                
             }
         }
         .divider{
@@ -148,25 +146,26 @@ const NavContainer = styled.nav`
             width: 15.938rem;
             height: 0.063rem;
             background-color: #A4A6B3;
-            left: 0rem;
+            right: 2.515rem; 
         }
         .settings{
             position: absolute;
             top: 23rem;
-            left: 0rem;
-        }
-        a:hover{
-            opacity: 1;
-           
+            right: 2.515rem; 
         }
         li:hover{
             background-color: #3e4049;
+            position: relative;
+            right: 2.515rem;  
+        }
+        a:hover{
+            opacity: 1;
         }
 
         @media(min-width: 768px)
         {
         width: 15.938rem;
-        height: 100%;
+        height: 38rem;
         display: block;
         position: absolute;
         margin-left: 4px;
@@ -181,7 +180,7 @@ const NavContainer = styled.nav`
     }
     .sidebar.active{
         width: 15.938rem;
-        height: 100%;
+        height: 38rem;
         display: block;
         position: absolute;
         margin-left: 5px;
