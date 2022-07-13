@@ -12,11 +12,11 @@ const Navigation = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
         <Route path="/review" element={<Review />}></Route>
         <Route path="/works" element={<Works />}></Route>
         <Route
-          path="/register"
+          path="/"
           element={<Register />}
         ></Route>
         <Route path="/login" element={<Login />}></Route>

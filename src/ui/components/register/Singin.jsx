@@ -1,6 +1,6 @@
 import { React } from 'react';
 import PropTypes from 'prop-types';
-import styles from './Register.module.css';
+import styles from './Singin.module.css';
 import { Card } from './subcomponents/card-default/card-default';
 import { Container } from './subcomponents/container-default/container-default';
 import useForm from '../../../hooks/useForm';
@@ -10,17 +10,59 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import IconButton from '@material-ui/core/IconButton';
 import Input from '@material-ui/core/Input';
-
-export const Register = ({ isLoading, errors, label }) => {
+import Swal from 'sweetalert2'
+import Axios from 'axios'
+import { Link} from '@material-ui/core'
+import {BootstrapButton, createTheme} from './subcomponents/button/button'
+export const Singin= ({ isLoading, errors, label }) => {
   const [form, handlerChangeForm, handlerResetForm] = useForm({
     email: 'fanor@gmail.com',
     password: '',
     repassword: '',
   });
   const { email, password, repassword } = form;
-  const onSubmit = (event) => {
-    event.preventDefault();
-  };
+  const register = async(e)=>{
+    e.preventDefault(); 
+    const USER={
+      email,
+      password,
+     
+   
+      
+    
+    }
+  //const token =sessionStorage.getItem('token')
+     const respuesta = await Axios.post('/server/autenthication/register',USER,
+     //{headers:{'autorizacion':token}}
+      ); 
+      
+     console.log(respuesta) 
+     
+     const msn= respuesta.data.msn
+    if(msn=='No se han enviado parametros para la autenticacion ') {
+    
+      Swal.fire({
+        icon: 'error', 
+        title: msn, 
+        showConfirmButton: false,
+        timer: 1500 
+      })
+    }
+      else{
+   
+      Swal.fire({
+        icon:'success', 
+        title: 'Usuario registrado con exito', 
+        showConfirmButton: false, 
+        timer: 1500
+     }) 
+     
+    setTimeout(() => {
+    
+      window.location.href='/home'
+    },1600)
+    }
+  }
   const handleClickShowPassword = () => {
     handlerResetForm({ ...password, showPassword: !password.showPassword });
     handlerResetForm({
@@ -49,7 +91,7 @@ export const Register = ({ isLoading, errors, label }) => {
           {isLoading ? (
             <div>Loading...</div>
           ) : (
-            <form className={styles['form']} onSubmit={onSubmit}>
+            <form className={styles['form']} onSubmit={register}>
               <div className={styles['textefield-label-icon-default']}>
                 <Text className={styles['text-email']}>EMAIL</Text>
                 <Input
@@ -112,12 +154,12 @@ export const Register = ({ isLoading, errors, label }) => {
                   }
                 />
               </div>
-              <Text className={styles['forgot-password']}>
+              <Link className={styles['forgot-password']}>
                 Forgot password?
-              </Text>
-              <button className='button' type='submit'>
-                {label}
-              </button>
+              </Link>
+              <BootstrapButton className='button' type='submit'>
+                Sing In 
+              </BootstrapButton>
               <div className={styles['login']}>
                 <span className={styles['message']}>
                   Do you already have an account?
@@ -133,7 +175,7 @@ export const Register = ({ isLoading, errors, label }) => {
   );
 };
 
-Register.propTypes = {
+Singin.propTypes = {
   /**
    * Is this the principal call to action on the page?
    */

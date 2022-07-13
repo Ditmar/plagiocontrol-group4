@@ -4,7 +4,8 @@ import './ui/components/register/subcomponents/assets/styles/font.css';
 import './ui/components/register/subcomponents/assets/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Axios from 'axios';
+Axios.defaults.baseURL='https://backendsingin.herokuapp.com'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
