@@ -9,7 +9,7 @@ import { ImageConfig } from './config/imageConfig';
 import { FaTrash } from 'react-icons/fa'
 
 
-const DropFileInput = props => {
+const DropFileInput = ({ isUploadfile, props}) => {
 
     const wrapperRef = useRef(null);
 
@@ -118,7 +118,7 @@ const DropFileInput = props => {
 
 DropFileInput.propTypes = {
     onFileChange: PropTypes.func,
-
+    isUploadedfile: PropTypes.bool
 }
 
 export default DropFileInput;
