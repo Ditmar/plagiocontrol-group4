@@ -1,8 +1,15 @@
-import React from 'react';
-export const Login = () => {
+import { React } from 'react';
+import PropTypes from 'prop-types';
+import './Login.css';
+import useForm from '../../hooks/useForm';
+export const Login = ({isLoading, errors, label}) => {
+    const [ handlerChangeForm] = useForm({username:'' , password: ''});
+    const onSubmit = (event) => {
+        event.preventDefault();
+    }
     return (
         <div className='containerPrincipal'>
-            {isLoading?(<div>Loading</div>):
+            {isLoading?(<div>isLoading</div>):
             (<form onSubmit={onSubmit} >
                 <div className='containerSecundario'>
                     <div className='containerT1'>
@@ -30,12 +37,12 @@ export const Login = () => {
                             name='password'
                             placeholder='Password'
                             className={errors?'inputErrors2':'form-control2'}
-                            
+                            onChange={handlerChangeForm} 
                         />
                        
                     </div>
                     
-                    <input className='btn btn-primary' type='submit' value={label} onClick='onSubmit' ></input>
+                    <input className='btn btn-primary' type='submit' value={label}  ></input>
                     <label className='Bill'>No tienes una cuentas?</label>
                     <label className='creates'><a>Sign up</a></label>
                     
@@ -43,5 +50,5 @@ export const Login = () => {
             </form> )}
             
         </div>
-    )
+    );
 }

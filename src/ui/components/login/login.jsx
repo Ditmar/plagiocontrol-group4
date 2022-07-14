@@ -35,4 +35,4 @@ Login.propTypes = {
      isLoading: PropTypes.bool,
      errors: PropTypes.bool,
      label: PropTypes.string
-  };
+  }
