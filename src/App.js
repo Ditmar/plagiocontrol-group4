@@ -1,9 +1,14 @@
 import { Register } from './ui/components/register/Register';
+
+import Navigation from './context/Navigation';
 function App() {
   return (
     <div>
-      <Register isLoading={false} label='Sing In' />
+       <Navigation />
+     
+     
     </div>
+      
   );
 }
 
