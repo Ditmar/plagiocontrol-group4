@@ -1,3 +1,14 @@
+import Navigation from './context/Navigation';
+function App() {
+  return (
+    <div>
+       <Navigation />
+     
+     
+    </div>
+      
+  );
+}
 
 import Navigation from './context/Navigation'; 
 import Container from "@material-ui/core/Container"; 
