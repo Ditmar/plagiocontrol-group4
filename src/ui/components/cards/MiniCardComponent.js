@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
 export const MiniCardComponent= ({ className = '', title, value })=> {
     const composedClassName = `${css(styles.container)} ${className}`;
     return (
-        <Column flexGrow={1} className={composedClassName} horizontal="center" vertical="center">
+        <Column flexGrow={1} className={composedClassName} horizontal='center' vertical='center'>
             <span className={css(styles.title)}>{title}</span>
             <span className={css(styles.value)}>{value}</span>
         </Column>

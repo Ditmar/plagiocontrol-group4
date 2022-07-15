@@ -2,7 +2,7 @@ import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
 import { ContentComponent } from './ContentComponent';
-import "./style.css";
+import './style.css';
 const styles = StyleSheet.create({
   container: {
     height: '100%',
