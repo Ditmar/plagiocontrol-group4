@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from '../../ui/components/CardDocument/Card'
-export const Works = () => {
+export const Report = () => {
     return (
         <div>
-            <Card/>     
+            <Card/>
         </div>
     )
 }
