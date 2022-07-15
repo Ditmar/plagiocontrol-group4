@@ -1,9 +1,9 @@
 import React from 'react';
-import {RecentDocuments} from './RecentDocuments';
+import {LastDocument} from './LastDocument';
 export default {
-  title: './RecentDocuments',
-  component: RecentDocuments,
+  title: './LastDocument',
+  component: LastDocument,
 };
 
-const Template = (args) => <RecentDocuments {...args} />;
+const Template = (args) => <LastDocument {...args} />;
 export const DefaultButton = Template.bind({});
