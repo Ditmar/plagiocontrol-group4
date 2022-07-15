@@ -1,8 +1,9 @@
 
 import React from 'react'; 
-import {RecentDocuments} from '../../ui/components/LastDocuments/RecentDocuments'; 
+
+import LastDocument from '../../ui/components/LastDocuments/LastDocument';
 export const Home = () => { 
     return <div> 
-        <RecentDocuments/> 
+        <LastDocument/> 
     </div> 
 }
