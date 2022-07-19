@@ -8,7 +8,8 @@ import { ImageConfig } from './config/imageConfig';
 
 import { FaTrash } from 'react-icons/fa'
 
-const DropFileInput = ({ isUploadedfile, props }) => {
+
+const DropFileInput = ({ isUploadfile, props}) => {
 
     const wrapperRef = useRef(null);
 
@@ -19,16 +20,25 @@ const DropFileInput = ({ isUploadedfile, props }) => {
     const onDragLeave = () => wrapperRef.current.classList.remove('dragover');
 
     const onDrop = () => wrapperRef.current.classList.remove('dragover');
+    const criptFile = (file) => {
 
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            var base64 = reader.result;
+            console.log(base64.split(','));
+        }
+
+    }
     const onFileDrop = (e) => {
         const newFile = e.target.files[0];
         if (newFile) {
+
             const updatedList = [...fileList, newFile];
             setFileList(updatedList);
             props.onFileChange(updatedList);
         }
     }
-
     const fileRemove = (file) => {
         const updatedList = [...fileList];
         updatedList.splice(fileList.indexOf(file), 1);
@@ -36,68 +46,73 @@ const DropFileInput = ({ isUploadedfile, props }) => {
         props.onFileChange(updatedList);
     }
 
+    const fileSend = async () => {
+        const formData = new FormData();
+        for (let i = 0; i < fileList.length; i++) {
+            formData.append('', criptFile(fileList[i]));
+
+        }
+        await fetch('http://localhost:8000/server/upload', {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => response.json())
+            .catch(error => console.error('Error', error))
+            .then(response => console.log('Success', response))
+    }
+
+
     return (
+        <div>
+            <div
+                className='dropfilesinput'
+                ref={wrapperRef}
+                onDragEnter={onDragEnter}
+                onDragLeave={onDragLeave}
+                onDrop={onDrop}
+            >
+                <input
+                    type="file"
+                    name="files"
+                    onChange={onFileDrop}
+                />
 
-        <div
-            className='dropfilesinput'
-            ref={wrapperRef}
-            onDragEnter={onDragEnter}
-            onDragLeave={onDragLeave}
-            onDrop={onDrop}
-        >
-            {isUploadedfile ? (<div className='dropfilespreview__item'>
-                <div className="dropfilespreview__item__info">
-                    <div className="dropfilepreview__image">
-                    <img src="/pdf.png" alt="" />
-                    </div>
-                    <p className='fileName'>NOCHE DE TALENTOS  PROGRAMA  MAYO 2022.pdf </p>
-                    <br />
-                    <p className='fileSize'> 0.92MB</p>
-                    <div className="dropfilespreview__item__del">
-                        <FaTrash
-                        />
-                    </div>
-                </div>
-            </div>) : (<input
-                type="file"
-                onChange={onFileDrop}
-            />)}
-
-            {
-                fileList.length > 0 ? (
+                {
+                    fileList.length > 0 ? (
 
 
-                    <div className="dropfilespreview">
-                        {
-                            fileList.map((item, index) => (
+                        <div className="dropfilespreview">
+                            {
+                                fileList.map((item, index) => (
 
-                                <div key={index} className="dropfilespreview__item">
+                                    <div key={index} className="dropfilespreview__item">
 
-                                    <div className="dropfilespreview__item__info">
-                                        <div className="dropfilepreview__image">
-                                        <img src={ImageConfig[item.type.split('/')[1]] || ImageConfig['pdf']} alt="" />
+                                        <div className="dropfilespreview__item__info">
+                                            <div className="dropfilepreview__image">
+                                                <img src={ImageConfig[item.type.split('/')[1]] || ImageConfig['pdf']} alt="" />
+                                            </div>
+
+                                            <p className='fileName'>{item.name} </p>
+                                            <br />
+                                            <p className='fileSize'>{(item.size / 1000000).toFixed(2)}MB</p>
+
+
+
+                                            <div className="dropfilespreview__item__del">
+                                                <FaTrash onClick={() => fileRemove(item)}
+                                                />
+                                            </div>
                                         </div>
-                                        
-                                        <p className='fileName'>{item.name} </p>
-                                        <br />
-                                        <p className='fileSize'>{(item.size / 1000000).toFixed(2)}MB</p>
-                                        
-                                        
 
-                                        <div className="dropfilespreview__item__del">
-                                            <FaTrash onClick={() => fileRemove(item)}
-                                            />
-                                        </div>
                                     </div>
-
-                                </div>
-                            ))
-                        }
-                    </div>
-                ) : null
-            }
+                                ))
+                            }
+                        </div>
+                    ) : null
+                }
+            </div>
+            <button className='buttonSendFiles' onClick={() => fileSend()}>Enviar</button>
         </div>
-
     );
 }
 
